@@ -31,6 +31,10 @@ const services = [
   },
 ];
 
+// Auto-revalidate setiap 60 detik agar perubahan dari admin
+// (hero images, menu, portfolio, testimoni) langsung terlihat.
+export const revalidate = 60;
+
 export default async function HomePage() {
   const [featuredMenu, featuredPortfolio, testimonials, heroImages] =
     await Promise.all([

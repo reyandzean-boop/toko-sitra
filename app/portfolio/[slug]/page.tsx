@@ -4,6 +4,9 @@ import { notFound } from 'next/navigation';
 import { getAllPortfolio, getPortfolioBySlug } from '@/lib/data';
 import { formatDateID } from '@/lib/utils';
 
+// Auto-revalidate tiap 60 detik untuk portfolio detail
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const items = await getAllPortfolio();
   return items.map((item) => ({ slug: item.slug }));
