@@ -148,7 +148,7 @@ export default function AdminTestimonialsPage() {
               </div>
 
               <p className="line-clamp-3 text-sm text-espresso/75">
-                "{item.content}"
+                &ldquo;{item.content}&rdquo;
               </p>
 
               <div className="mt-4 flex items-center justify-between border-t border-espresso/10 pt-3 text-xs text-espresso/50">

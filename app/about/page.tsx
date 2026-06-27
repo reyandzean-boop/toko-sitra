@@ -75,7 +75,7 @@ export default function AboutPage() {
           <div className="mt-10 space-y-6 text-base leading-relaxed text-espresso/80 sm:text-lg">
             <p>
               Toko Sitra bermula dari sebuah pertanyaan sederhana:{' '}
-              <em>"Bagaimana kalau ngopi bisa jadi lebih dari sekadar ngopi?"</em>{' '}
+              <em>&ldquo;Bagaimana kalau ngopi bisa jadi lebih dari sekadar ngopi?&rdquo;</em>{' '}
               Berdiri sejak 2020 di Jakarta, kami membangun ruang di mana
               specialty coffee bertemu dengan kreativitas tanpa batas.
             </p>

@@ -33,7 +33,7 @@ export default function TestimonialSlider({ testimonials }: Props) {
       <div className="card-base relative p-8 sm:p-12">
         {/* Quote mark */}
         <div className="absolute left-6 top-4 font-display text-6xl text-pink/30 sm:text-7xl">
-          "
+          &ldquo;
         </div>
 
         <div className="text-center">
@@ -52,7 +52,7 @@ export default function TestimonialSlider({ testimonials }: Props) {
 
           {/* Content */}
           <p className="text-base leading-relaxed text-espresso/80 sm:text-lg">
-            "{current.content}"
+            &ldquo;{current.content}&rdquo;
           </p>
 
           {/* Avatar + name */}
