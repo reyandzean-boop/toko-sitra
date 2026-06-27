@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FEDDE2;
+  color: #111111;
+  font-family: var(--font-body);
+}
+
+/* Scrollbar kustom — selaras brand */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FEDDE2;
+}
+::-webkit-scrollbar-thumb {
+  background: #3B1F0E;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1F0F06;
+}
+
+/* Komponen utilitas */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-pinkDark px-8 py-3 text-sm font-semibold text-cream transition-all hover:bg-pink hover:shadow-lg active:scale-95;
+  }
+  .btn-pink {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-pink px-8 py-3 text-sm font-semibold text-espresso transition-all hover:bg-pinkDark hover:shadow-lg active:scale-95;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-espresso bg-transparent px-8 py-3 text-sm font-semibold text-espresso transition-all hover:bg-espresso hover:text-cream active:scale-95;
+  }
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-cream bg-transparent px-8 py-3 text-sm font-semibold text-cream transition-all hover:bg-cream hover:text-espresso active:scale-95;
+  }
+  .container-custom {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+  .heading-display {
+    @apply font-display text-4xl font-bold leading-tight text-espresso sm:text-5xl lg:text-6xl;
+  }
+  .heading-section {
+    @apply font-display text-3xl font-bold text-espresso sm:text-4xl;
+  }
+  .card-base {
+    @apply rounded-2xl bg-white shadow-sm transition-all hover:shadow-xl;
+  }
+}
+
+/* Animasi utility */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
